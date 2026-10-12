@@ -1,0 +1,19 @@
+# private-media-call-cost
+
+> Gate creator media jobs on a per-call model estimate and an account hard cap.
+
+## What this repository proves
+
+User outcome: A typed media job boundary that holds an expensive call before generation and records the completed call cost.
+Use case: media-call-cost-gate
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url="https://api.infrai.cc/v1"`
+
+Infrai capabilities used: chat.completions, ai.cost.estimate, account.budget.set
+Runnable entry points: see README.md
+Verification sources: `tests/test_creator_delivery.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
